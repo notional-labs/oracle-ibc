@@ -1,0 +1,16 @@
+[package]
+name = "band-standard-dataset"
+version = "0.1.0"
+authors = ["nghuyenthevinh2000 <nghuyenthevinh@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+owasm-kit = "0.1.13"
+obi = "0.0.2"
+lazy_static = "1.4.0"
+transpose = "0.2.0"
+strum = "0.21"
+strum_macros = "0.21"
