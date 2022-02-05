@@ -117,7 +117,7 @@ export EXECUTE='{"oracle_request": {"contract": "YOUR_CONTRACT_ADDRESS", "client
 junod tx wasm execute "YOUR_CONTRACT_ADDRESS "$EXECUTE" --gas 10000000 --fees 100000ujuno --chain-id juno-1 --node https://rpc.juno.giansalex.dev:443 --from {your_key} --amount 900ujuno -y  
 ```
 
-###Proof of query oracle data over ibc
+### Proof of query oracle data over ibc
 - Packet receive in tx : [mintscan](https://www.mintscan.io/juno/txs/0419C27A42844342E56EA82C70D44611E3A2D299808BD523220CD61BDE619778)
 - Execute contract : [mintscan](https://www.mintscan.io/juno/txs/E9F4F8C7AA3F8D287D8C199540CF90E25E6A459A8A49E5ACF78FEF93CD7DAB1F)
 
