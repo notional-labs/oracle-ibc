@@ -10,7 +10,7 @@
 
 
 ### Setup localtestnet bandchain 
-- First Setup a localtestnet of bandchain: Guide here
+- First Setup a localtestnet of bandchain: [guide here](https://github.com/notional-labs/oracle-ibc/blob/main/band_oracle/deployment_guide.md)
 ### Instance the contract
 - I've stored my contract in Juno mainnet, you instance it by command
 ```
