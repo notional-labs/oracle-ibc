@@ -11,6 +11,8 @@
 ### Setup localtestnet bandchain 
 1. First Setup a localtestnet of bandchain
 ```
+git clone https://github.com/nguyenvuong1122000/chain
+cd chain
 make install
 ```
 
