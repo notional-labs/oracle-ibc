@@ -14,7 +14,7 @@
 ### Instance the contract
 - I've stored my contract in Juno mainnet, you instance it by command
 ```
-junod tx wasm instantiate 52 '{"default_timeout": 50}' --amount 5000ujuno --fees 20000ujuno  --gas 20000000 --label "JUNO BOUNTY FROM VUONG" --from {your-key} --chain-id juno-1 -y --node {mainnet-node}
+junod tx wasm instantiate 52 '{"default_timeout": 50}' --from {your-key} --amount 5000ujuno --fees 20000ujuno  --gas 20000000 --label "JUNO BOUNTY FROM VUONG"  --chain-id juno-1 -y --node  https://juno-1.technofractal.com:443
 ```
 The output should be something like this:
 ```
@@ -35,7 +35,7 @@ txhash: 50685F29A0B753D78B73CE118447E7587B8D63BF6822A2B9174DEF23F944E1F2
 ```
 We can now query the transaction and return the address of the instantiated contract using the following command:
 ```
-ADDRESS=$(junod query tx {YOUR_TX_HASH_HERE}  --output json --node {YOUR_NODE} | jq -r '.logs[0].events[-1].attributes[0].value')
+ADDRESS=$(junod query tx {YOUR_TX_HASH_HERE}  --output json --node  https://juno-1.technofractal.com:443 | jq -r '.logs[0].events[-1].attributes[0].value')
 ```
 Remember your address, we need it in next step.
 
@@ -86,7 +86,7 @@ chains:
     hd_path: m/44'/118'/0'/0/0
     ics20_port: 'wasm.YOUR_CONTRACT_HERE'
     rpc:
-      - https://rpc.juno.giansalex.dev:443
+      -  https://juno-1.technofractal.com:443
 ```
 - Start relaying
 ```
@@ -96,7 +96,7 @@ ibc-relayer start --poll 5
 #### Execute contract
 - Query your channel by command
 ```
-junod query wasm contract-state smart YOUR_CONTRACT_ADDRESS_HERE '{"list_channels": {}}' --chain-id juno-1 --node  https://rpc.juno.giansalex.dev:443
+junod query wasm contract-state smart YOUR_CONTRACT_ADDRESS_HERE '{"list_channels": {}}' --chain-id juno-1 --node  https://juno-1.technofractal.com:443
 ```
 Got result like that :
 ```
@@ -114,7 +114,7 @@ Now you can execute by command :
 ```
 export EXECUTE='{"oracle_request": {"contract": "YOUR_CONTRACT_ADDRESS", "client_id": "client_id", "oracle_script_id":1, "channel":"YOUR_CHANNEL", "call_data":"000000090000000345544800000004555344430000000344414900000004555344540000000442555344000000044c494e4b00000003554e49000000045742544300000004434f4d50000000003b9aca00","ask_count":1, "min_count":1, "denom":"uband"}}'
 
-junod tx wasm execute "YOUR_CONTRACT_ADDRESS "$EXECUTE" --gas 10000000 --fees 100000ujuno --chain-id juno-1 --node https://rpc.juno.giansalex.dev:443 --from {your_key} --amount 900ujuno -y  
+junod tx wasm execute "YOUR_CONTRACT_ADDRESS "$EXECUTE"  --from {your_key} --gas 10000000 --fees 100000ujuno --chain-id juno-1 --node  https://juno-1.technofractal.com:443 --amount 900ujuno -y  
 ```
 
 ### Proof of query oracle data over ibc
