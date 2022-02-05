@@ -39,6 +39,7 @@ pub fn instantiate(
 pub fn execute(
     deps: DepsMut,
     env: Env,
+    info: MessageInfo,
     msg: ExecuteMsg,
 ) -> Result<Response, ContractError> {
     match msg {
