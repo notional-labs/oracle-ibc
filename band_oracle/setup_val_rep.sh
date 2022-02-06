@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WALLET_NAME=relayerAccount
+WALLET_NAME=fundingAccount
 CHAIN_ID=band-testing
 
 bandd tx multi-send 1000uband $(yoda keys list -a) --from $WALLET_NAME --chain-id $CHAIN_ID

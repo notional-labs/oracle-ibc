@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WALLET_NAME=relayerAccount
+WALLET_NAME=fundingAccount
 CHAIN_ID=band-testing
 
 rm -rf ~/.yoda # clear old config if exist

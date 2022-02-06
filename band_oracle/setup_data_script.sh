@@ -5,9 +5,9 @@ TXHASH_1=$(bandd tx oracle create-data-source \
     --fee 250000uband \
     --description "CoinMarketCap" \
     --script CoinMarketCap.py \
-    --from relayerAccount \
-    --owner $(bandd keys show relayerAccount -a) \
-    --treasury $(bandd keys show relayerAccount -a) \
+    --from fundingAccount \
+    --owner $(bandd keys show fundingAccount -a) \
+    --treasury $(bandd keys show fundingAccount -a) \
     --node http://localhost:26657 \
     --chain-id band-testing \
     --gas auto \
@@ -23,9 +23,9 @@ TXHASH_2=$(bandd tx oracle create-data-source \
     --fee 250000uband \
     --description "CoinGecko" \
     --script CoinGecko.py \
-    --from relayerAccount \
-    --owner $(bandd keys show relayerAccount -a) \
-    --treasury $(bandd keys show relayerAccount -a) \
+    --from fundingAccount \
+    --owner $(bandd keys show fundingAccount -a) \
+    --treasury $(bandd keys show fundingAccount -a) \
     --node http://localhost:26657 \
     --chain-id band-testing \
     --gas auto \

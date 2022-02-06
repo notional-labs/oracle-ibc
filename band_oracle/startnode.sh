@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WALLET_NAME=relayerAccount
+WALLET_NAME=fundingAccount
 CHAIN_ID=band-testing
 
 rm -rf $HOME/.band

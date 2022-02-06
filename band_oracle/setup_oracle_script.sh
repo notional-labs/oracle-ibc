@@ -5,8 +5,8 @@ TXHASH=$(bandd tx oracle create-oracle-script \
     --name "Band Standard Dataset" \
     --description "Band Standard Dataset" \
     --script "./Band_Standard_Dataset/target/wasm32-unknown-unknown/release/band_standard_dataset.wasm" \
-    --from relayerAccount \
-    --owner $(bandd keys show relayerAccount -a) \
+    --from fundingAccount \
+    --owner $(bandd keys show fundingAccount -a) \
     --node http://localhost:26657 \
     --chain-id band-testing \
     --gas auto \
