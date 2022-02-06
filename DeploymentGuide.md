@@ -17,6 +17,8 @@ make install
 ```
 
 2. Setup local band chain
+__WARNING__: before starting band node, script will create relayerAccount to use both as oracle validator, funding and later __relayer account__. 
+
 ```
 cd band_oracle
 bash startnode.sh
@@ -87,10 +89,8 @@ ibc-setup init --src oysternet --dest nyancat
 ```
 junod keys add relayerAccount --recover
 ```
-Similar to band 
-```
-bandd keys add relayerAccount --recover --hd-path "m/44'/118'/0'/0/0" 
-```
+Similar to band, relayerAccount is created from step above.
+
 Don't forget fund your relayer to relay
 
 - We create a connection between two chain (juno-1 & band-tesing)
