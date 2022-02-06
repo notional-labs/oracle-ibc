@@ -236,9 +236,6 @@ pub fn ibc_packet_receive(
     msg: IbcPacketReceiveMsg,
 ) -> Result<IbcReceiveResponse, Never> {
     let packet = msg.packet;
-    println!("{} FUCK ======================", 31);
-    println!("{} FUCK ======================", 31);
-    println!("{} FUCK ======================", 31);
 
 
     let res = match do_ibc_packet_receive(&packet) {
