@@ -10,7 +10,6 @@ TXHASH=$(bandd tx oracle create-oracle-script \
     --node http://localhost:26657 \
     --chain-id band-testing \
     --gas auto \
-    --keyring-backend test \
     -y \
     -o json | jq -r .txhash)
     
