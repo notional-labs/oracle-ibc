@@ -32,8 +32,7 @@ you will get data source id after running the above code. __Remember data source
 
 4. deploy oracle script
 * go into folder band_oracle/Band_Standard_Dataset/src/logic.rs
-* search for this line of code:
-[change_data_source](change_data_source.png)
+* search for this line of code:![image](https://user-images.githubusercontent.com/56973102/153032015-5a443ba9-795a-4896-8e7a-a8462b494283.png)
 * change data_source_id according to the output of step 3
 * run as following:
 ```
