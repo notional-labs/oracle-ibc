@@ -251,7 +251,6 @@ pub fn ibc_packet_receive(
                 attr("status", "sucess"),
             ];
             IbcReceiveResponse::new()
-                .set_ack(ack_success())
                 .add_attributes(attributes)
         }
         Err(err) => IbcReceiveResponse::new()
