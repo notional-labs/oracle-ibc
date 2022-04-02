@@ -17,7 +17,7 @@ use crate::msg::{
 use crate::state::{Config, CHANNEL_INFO, CHANNEL_STATE, CONFIG};
 
 // version info for migration info
-const CONTRACT_NAME: &str = "crates.io:cw20-ics20";
+const CONTRACT_NAME: &str = "band-protocol";
 const CONTRACT_VERSION: &str = env!("CARGO_PKG_VERSION");
 
 #[cfg_attr(not(feature = "library"), entry_point)]
